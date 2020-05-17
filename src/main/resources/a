@@ -1,0 +1,47 @@
+when
+    流程 == "推送bos"
+then
+    当前策略配置表 = 配置.get("推送配置表").get(策略);
+    when
+        !isEmpty(当前策略配置表)
+    then
+        当前城市配置表 = 当前策略配置表.get("城市配置表").get(城市);
+        when
+            !isEmpty(当前城市配置表)
+        then {
+            when
+                当前策略配置表.get("站点是否全推")
+            then {
+                true
+            }
+            else {
+                当前站点列表 = 当前城市配置表.get("站点配置列表");
+                when (!isEmpty(当前站点列表) and 当前站点列表.contains(站点) )
+                then {
+                    true
+                }
+                else {
+                    false
+                }
+            }
+        }
+        else {
+            when
+                当前策略配置表.get("城市未配置时是否推送")
+            then {
+                true
+            }
+            else {
+                false
+            }
+        }
+    else {
+        when
+            配置.get("策略未配置时是否推送")
+        then {
+            true
+        }
+        else {
+            false
+        }
+    }

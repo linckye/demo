@@ -1,0 +1,11 @@
+package demo
+
+import drools.Context
+import java.util.Map
+
+rule "年龄输出"
+     when
+        $context:Context(inputs['age']<=12)
+     then
+        $context.getOutputs().put("pass", "ok");
+end

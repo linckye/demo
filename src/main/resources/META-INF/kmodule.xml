@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kmodule xmlns="http://jboss.org/kie/6.0.0/kmodule">
+    <!-- packages值要与src\main\resources目录下rules文件夹名一致  -->
+    <kbase name="demo" packages="demo">
+        <ksession name="demo-ksession-rules"/>
+    </kbase>
+</kmodule>
