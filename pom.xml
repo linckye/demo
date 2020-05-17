@@ -35,11 +35,6 @@
             <artifactId>aviator</artifactId>
             <version>4.2.8</version>
         </dependency>
-        <dependency>
-            <groupId>com.hellobike.aiplatform</groupId>
-            <artifactId>AppScheduleTaskCenter-Common</artifactId>
-            <version>1.0.2-SNAPSHOT</version>
-        </dependency>
 
         <dependency>
             <groupId>commons-codec</groupId>
@@ -57,12 +52,7 @@
             <version>7.33.0.Final</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.hellobike.aiplatform</groupId>
-            <artifactId>AIEngineBase-Common</artifactId>
-        </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.apache.shardingsphere/sharding-jdbc-core -->
         <dependency>
             <groupId>org.apache.shardingsphere</groupId>
             <artifactId>sharding-jdbc-core</artifactId>
@@ -74,16 +64,31 @@
             <version>4.0.1</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
 
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.60</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.29.Final</version>
+        </dependency>
 
     </dependencies>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.hellobike.aiplatform</groupId>
-                <artifactId>AIEngineBase</artifactId>
-                <version>1.1.7-SNAPSHOT</version>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.2.1.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

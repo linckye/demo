@@ -1,19 +1,9 @@
 package crypto;
 
-import com.google.common.base.CharMatcher;
-import com.google.common.collect.Maps;
-import org.apache.commons.codec.digest.DigestUtils;
-import sun.misc.BASE64Encoder;
-import sun.plugin2.message.Message;
-import sun.security.provider.MD5;
-
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
-import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
-import java.security.MessageDigest;
 import java.util.Base64;
-import java.util.Map;
 
 /**
  * @author linckye
